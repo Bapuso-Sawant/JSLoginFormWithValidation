@@ -2,19 +2,22 @@
 <htmt>
     <head>
         <title>LogIn Form</title>       
+        <style type=""></style>
+        <link rel="stylesheet" href="./index.css">
     </head>
     <body>
-            <h1>LogIn Form</h1>
-            <form method="post" name="LoginForm"></form>
-                <h2>
-                    <label>User Name: </label>
-                    <input type="text" name="uname" id="uname"><br><br>
-                    <label>Password: </label>
-                    <input type="password" name="pwd" id="pwd"><br><br>
-                    <input type="button" value="Login" id="submit" onclick="check()">
-                </h2>
-            </form>
-
+            <h1 id="heading">Login Form</h1>
+            <div id="form">
+                <form method="post" name="LoginForm"></form>
+                    <h2>
+                        <label>User Name: </label>
+                        <input type="text" name="uname" id="uname"><br><br>
+                        <label>Password: </label>
+                        <input type="password" name="pwd" id="pwd"><br><br>
+                        <input type="button" value="Login" id="submit" onclick="check()">
+                    </h2>
+                </form>
+            </div>  
             <script type="text/javascript">
                 var ctr = 2; 
                 function check(){
