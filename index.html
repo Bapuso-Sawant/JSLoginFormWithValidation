@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<htmt>
+    <head>
+        <title>LogIn Form</title>       
+    </head>
+    <body>
+            <h1>LogIn Form</h1>
+            <form method="post" name="LoginForm"></form>
+                <h2>
+                    <label>User Name: </label>
+                    <input type="text" name="uname" id="uname"><br><br>
+                    <label>Password: </label>
+                    <input type="password" name="pwd" id="pwd"><br><br>
+                    <input type="button" value="Login" id="submit" onclick="check()">
+                </h2>
+            </form>
+
+            <script type="text/javascript">
+                var ctr = 2; 
+                function check(){
+                    var urname = document.getElementById("uname").value;
+                    var pass = document.getElementById("pwd").value;
+                    if(urname === "Bapuso" && pass === "Sawant"){
+                        alert("Login Succesfully...");
+                        window.location = "login.html"; //It redirect to login.html page
+                        return false;
+                    }
+                    else{
+                        ctr--;
+                        alert("Username or Password is incorrect...")
+                    }
+                    if(ctr == 0){
+                        document.getElementById("uname").disabled=true;
+                        document.getElementById("pwd").disabled=true;
+                        document.getElementById("submit").disabled=true;
+                        return false;
+                    }
+                }
+            </script>
+    </body>
+</htmt>
